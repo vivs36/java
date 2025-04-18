@@ -1,0 +1,33 @@
+/*Write a java program to sort an array of 10 
+ * numbers in descending order by using liner / selection sort technique
+ */
+import java.util.Scanner;
+class Question_11
+{
+    static void main()
+    {
+        Scanner sc =new Scanner(System.in);
+        int i,j,t,min;
+        int m[]=new int[10];
+        for (i=0;i<10;i++)
+        {
+            System.out.println("Enter a integer number");
+            m[i]=sc.nextInt();
+        }
+        for (i=0;i<9;i++)
+        {
+            min=i;
+            for (j=i+1;j<10;j++)
+            {
+                if(m[j]>m[min])  //check smallest number
+                min=j;
+            }
+            t=m[i];
+            m[i]=m[min];
+            m[min]=t;
+        }
+        System.out.println("The numbers arranged in descending order");
+        for (i=0;i<10;i++) 
+        System.out.println(m[i]+ " ");
+    }
+}

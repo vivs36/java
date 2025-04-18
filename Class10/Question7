@@ -1,0 +1,36 @@
+/*Create a class NUMBER having the following class functions :-
+ boolean isTrimorphic(int n) that checks and returns true if ‘n’ is a TRIMORPHIC
+number otherwise returns false. A number ‘n’ is called TRIMORPHIC if n3
+ends in
+n. For Example – 493 = 117649, is TRIMORPHIC
+ void call() to accept an integer using Scanner object and check whether it is a
+TRIMORPHIC number or not.*/
+import java.util.Scanner;
+class NUMBER
+{
+    boolean isTrimorphic(int n)
+          {
+            int c=0,cube,n1=n;
+            cube=n*n*n;
+            while(n>0)
+              {
+                  n=n/10;
+                  c++;
+                }
+            int p=cube%(int)Math.pow(10,c);
+            if(p==n1)
+             return true;
+           else 
+           return false;
+        }
+        void call()
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter number");
+            int m=sc.nextInt();
+            if(isTrimorphic(m))
+              System.out.println(m+" Is Trimorphic number");
+            else
+              System.out.println(m+" Is not a Trimorphic number");
+            }
+        }       

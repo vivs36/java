@@ -1,0 +1,18 @@
+/*Write a Java program to find the gross salary of an employee as per the below
+given allowances and deductions as per the question*/
+import java.util.Scanner;
+class Question_4
+{
+    static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Basic Salary of an Employee");
+        int basic=sc.nextInt();
+        double da=0.25*basic;
+        double hra=0.15*basic;
+        double pf=(8.33/100.0)*basic;
+        double net=basic+da+hra;
+        double gross=net-pf;
+        System.out.println("Gross Salary= "+gross);
+    }
+}

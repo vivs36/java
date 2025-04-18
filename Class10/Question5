@@ -1,0 +1,28 @@
+/*Write a Java program to keep on entering integer numbers in the terminal window
+using Scanner object. Terminate the input when the user enters a ZERO. Display
+the product of all positive numbers and sum of all negative numbers
+separately*/
+import java.util.Scanner;
+class Question_5
+{
+     void Zero()
+    {
+        Scanner sc=new Scanner(System.in);
+        int sum=0,pro=1;
+        int n;
+        while(true)
+        {
+            System.out.println("Enter a number");
+            n=sc.nextInt();
+            if(n==0)
+            break;
+            else if(n>0)
+            pro*=n; //product of positive numbers
+            else 
+            sum+=n;
+        }
+        System.out.println("Sum of negative number:"+sum);
+        System.out.println("Product of positive numbers:"+pro);
+        
+    }
+}

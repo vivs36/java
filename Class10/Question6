@@ -1,0 +1,38 @@
+/*Write a menu driven Java program to print the following series / pattern */
+import java.util.Scanner;
+class Question_6
+{
+     void Pattern()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("1- Patter 1");
+        System.out.println("2- Pattern 2");
+        System.out.println("Enter your choice");
+        int ch=sc.nextInt();
+        int i,j;
+        switch(ch)
+        {
+            case 1: System.out.println("Enter number of terms");
+            int n=sc.nextInt();
+            int p=1;
+            for(i=0;i<n;i++)
+            {
+                p+=i;
+                System.out.print(p+"," );
+            }
+            break;
+            
+            case 2: int q=1;
+            for(i=1;i<=5;i++)
+            {
+                for(j=1;j<=i;j++)
+                System.out.print(q+",");
+                System.out.println();
+                q+=2;
+            }
+            break;
+            default:System.out.println("Invalid Choice");
+            }
+        }
+    }
+        

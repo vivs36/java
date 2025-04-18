@@ -1,0 +1,39 @@
+/*Write a java program that creates and inputs floating point numbers into a 2-dim array 
+ * of size 4,3 . Calculate and print sum of each row and each column seperately
+ */
+import java.util.Scanner;
+class Question_14
+{
+    static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        float x[][]=new float[4][3];
+        System.out.println("Enter 12 values for 4*3 matrix");
+        int i,j;
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<3;j++)
+            x[i][j]=sc.nextFloat();  //accepting values
+        }
+        float sumr=0.0f;
+        float sumc=0.0f;
+        for(i=0;i<4;i++)
+        {
+            sumr=0.0f;
+            for(j=0;j<3;j++)
+            {
+            sumr+=x[i][j];
+            }
+            System.out.println("Sum of "+(i+1)+" row = "+sumr);
+        }
+          for(i=0;i<3;i++)
+        { 
+            sumc=0.0f;
+            for(j=0;j<4;j++)
+            {
+            sumc+=x[j][i];
+            }
+            System.out.println("Sum of "+(i+1)+" column = "+sumc);
+        }
+    }
+}

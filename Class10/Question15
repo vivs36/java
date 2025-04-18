@@ -1,0 +1,36 @@
+/*Write a Java program that inputs integers in a 2-dim array of 3 rows
+ *and 3 columns and print only the boundary or outer elements of the array
+ */
+import java.util.Scanner;
+class Question_15
+{
+    static void Print()
+    {
+        Scanner sc=new Scanner(System.in);
+        int x[][]=new int[3][3];
+        System.out.println("Enter 9 numbers for a 3*3 array");
+        int i,j;
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+            x[i][j]=sc.nextInt();  //accepting values
+        }
+        System.out.println("You have entered");
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+             System.out.print(x[i][j]+"\t");
+              System.out.println();
+        }
+         System.out.println("The boundary elements of the matrix are : ");
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+             if(i==0 || j==0 || i==3-1 ||j==3-1)
+              System.out.println(x[i][j]+"\t");
+              else
+              System.out.println("\t");
+            }
+            System.out.println();
+        }
+    }

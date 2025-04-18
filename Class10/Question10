@@ -1,0 +1,56 @@
+/*To calculate the volume 
+ * of the cube*/
+ import java.util.*;
+ class Volume
+ {
+     int l;
+     int b;
+     int h;
+     long vol;
+     public Volume()
+     {
+         l=1;
+         b=2;
+         h=3;
+     }
+     public Volume(int height)
+     {
+         l=10;
+         b=14;
+         h=height;
+     }
+     public Volume(int length,int breadth,int height)
+     {
+         l=length;
+         b=breadth;
+         h=height;
+     }
+     void compute()
+     {
+         vol=l*b*h;
+     }
+     void display()
+     {
+         System.out.println("Volume="+vol);
+     }
+     public static void main()
+     {
+         Scanner sc=new Scanner(System.in);
+         Volume obj1=new Volume();
+         obj1.compute();
+         obj1.display();
+         System.out.println("Enter height");
+         int ht =sc.nextInt();
+         Volume obj2=new Volume(ht);
+         obj2.compute();
+         obj2.display();
+         System.out.println("Enter length, breadth and height");
+         int len=sc.nextInt();
+         int bd=sc.nextInt();
+         int het=sc.nextInt();
+         Volume obj3=new Volume(len,bd,het);
+         obj3.compute();
+         obj3.display();
+}
+}
+
