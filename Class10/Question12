@@ -1,0 +1,41 @@
+/*Write a java program to perform binary search on a lisy 
+ * of 10 integers accepted from the user through Scanner class.
+ * Find a particular integer given as an input by the user . 
+ * if found display the elements along with its position otherwise display 
+ * "Search element not found
+ */
+import java.util.Scanner;
+class Question_12
+{
+    static void Search()
+    {
+        Scanner sc=new Scanner(System.in);
+        int a[]=new int[10];
+        int i;
+        System.out.println("Enter Array Elements");
+        for(i=0;i<10;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        System.out.println("Enter Search Element");
+        int val=sc.nextInt();
+        int mid,lb=0,ub=9,pos=-1;
+        while(ub>=lb)
+        {
+            mid=(ub+lb)/2;   //middle value between lb and ub
+            if(val==a[mid])
+            {
+                pos=mid;
+                break;
+            }
+            else if(val>a[mid])
+            lb=mid+1;
+            else
+            ub=mid-1;
+        }
+        if(pos>=0)
+        System.out.println(val+" element found at : "+(pos+1));
+        else
+        System.out.println("Search element not found");
+    }
+}

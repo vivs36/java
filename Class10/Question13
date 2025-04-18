@@ -1,0 +1,38 @@
+/*Write a java program to store positive integers in 4*4 matrix 
+ * in DDA . Display left and right diagnal values 
+ */
+import java.util.Scanner;
+class Question_13
+{
+    void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        int x[][]=new int[4][4];
+        System.out.println("Enter 16 values for 4*4 matrix");
+        int i,j;
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<4;j++)
+            x[i][j]=sc.nextInt();  //accepting values
+        }
+        System.out.print("The Left Diagnol: ");
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<4;j++)
+            {
+            if(i==j)
+            System.out.print(x[i][j]+" ");
+            }
+        }
+        System.out.println();
+        System.out.print("The Right Diagnol");
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<4;j++)
+            {
+            if((i+j)==3)
+            System.out.print(x[i][j]+" ");
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+/*Create and execute the following program in BlueJ
+ * and write them in your Computer application project
+ */
+import java.util.Scanner;
+class CabService
+{
+     String car_Type;
+     double km;
+     double bill;
+     CabService()
+     {
+         car_Type="";
+         km=0.0;
+         bill=0.0;
+     }
+     private void accept()
+     {
+         Scanner sc=new Scanner(System.in);
+         System.out.println("Enter Car Type");
+         car_Type=sc.next();
+         System.out.println("Enter the Kilometre travelled");
+         km=sc.nextDouble();
+        }
+     private void calculate()
+     {    
+     if(km<=5.0 && car_Type.equals("AC"))
+     bill=150.0;
+     else if(km<=5.0 && car_Type.equals("Non-AC"))
+     bill=120.0;
+     else if(km>5.0 && car_Type.equals("AC"))
+     bill=10.0*km;
+     else if(km>5.0 && car_Type.equals("Non-AC"))
+     bill=8*km;
+    }
+    private void display()
+    {
+    System.out.println("Car Type = "+car_Type);
+    System.out.println("Kilometer Travelled = "+km);
+    System.out.println("Total Bill = "+bill);
+    }
+    public static void main()
+    {
+        CabService c1=new CabService();
+        c1.accept();
+        c1.calculate();
+        c1.display();
+    }
+}

@@ -1,0 +1,11 @@
+/*Write a Java program to compute and display the result of the following
+expression :-
+Input the values using function arguments*/
+class Question_2
+{
+    void main (int x,int y,int z)
+    {
+        double p=Math.pow(x,3)+Math.abs(2*x*y*y)+((3.0/2)*z)-1;
+        System.out.println("Result:"+p);
+    }
+}

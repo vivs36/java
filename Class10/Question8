@@ -1,0 +1,53 @@
+/*ABC Builders are providing power backup to their society residents according to
+the units consumed (per month). Write a Java program to print a BACK-UP slip of
+a customer*/
+import java.util.Scanner;
+class ABC_Builders
+  {
+        String name;
+        String CUST_ID;
+        String Month;
+        float units;
+        double bill;
+        private void Input() //input method
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter Customer Name");
+            name=sc.next();
+            System.out.println("Enter Customer ID");
+            CUST_ID=sc.next();
+            System.out.println("Enter current month name");
+            Month=sc.next();
+            System.out.println("Enter units consumed ");
+            units=sc.nextFloat();
+        }
+        private void Compute()
+        {
+            if(units<=100)
+            bill=5.75*units;
+            else if(units>100 && units<300)
+            bill=7.50*units;
+            else if(units>=300 && units<500)
+            bill=8.50*units;
+            else 
+            bill=10.0*units;
+        }
+        private void Display()
+        {
+            System.out.println("****************************************");
+            System.out.println("     ABC Builder society-Back Up Bill      ");
+            System.out.println("Name             \t"+name);
+            System.out.println("Customer_ID      \t"+CUST_ID);
+            System.out.println("Consumption month \t"+Month);
+            System.out.println("Units Consumed    \t"+units);
+            System.out.println("Total Bill         \t"+bill);
+        }
+        public static void main()
+        {
+            ABC_Builders obj=new ABC_Builders(); //object creation
+            obj.Input();
+            obj.Compute();
+            obj.Display();
+        }
+    }
+    
